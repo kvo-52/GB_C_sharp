@@ -1,4 +1,4 @@
-﻿/ Задача 2: Напишите программу, которая по заданному номеру четверти,
+﻿// Задача 2: Напишите программу, которая по заданному номеру четверти,
 // показывает диапазон возможных координат точек в этой четверти (x и y).
 
 int PromptInt(string strDescription) // Ввод целого числа
@@ -38,5 +38,6 @@ int Quarter = PromptInt ("Введите номер четверти: ");
 if (ValidateQuarter(Quarter))
 {
     (int x, int y) = FindCoords(Quarter);
-    Syste
+    System.Console.WriteLine();
+}
 
