@@ -8,14 +8,20 @@
 int numberDay = ValidateMessage("Введите число от 1 до 7: ");
 int day= numberDay;
 
+
 if (day==6 || day==7)
 {
  Console.WriteLine("Да. Выходной день");   
 }
-else 
+if (day>0 && day<6)
 {
-    Console.WriteLine("Нет. Будний день");
+   Console.WriteLine("Нет. Будний день");
 }
+if (day>7 || day<0)
+{
+   Console.WriteLine("Такого дня недели нет"); 
+}
+
 
 int ValidateMessage (string message)
 {
