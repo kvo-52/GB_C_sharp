@@ -30,9 +30,15 @@ int SumNambers(int number)
     return sum;
 }
 
+int SumGauss(int number)
+{
+    return (int)((number/2.0)*(1+number));
+}
+
 int number = Prompt("Введите число");
 if (ValidateNumber(number))
 {
     int sum =SumNambers(number);
-    System.Console.WriteLine($"Суума чисел от 1 до {number} до {sum}");
+    int sumGauss = SumGauss(number);
+    System.Console.WriteLine($"Суума чисел от 1 до {number} до {sum}, а Гаусс, что {sumGauss}");
 }
