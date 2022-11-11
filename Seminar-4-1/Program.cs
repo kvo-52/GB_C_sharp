@@ -40,5 +40,5 @@ if (ValidateNumber(number))
 {
     int sum =SumNambers(number);
     int sumGauss = SumGauss(number);
-    System.Console.WriteLine($"Суума чисел от 1 до {number} до {sum}, а Гаусс, что {sumGauss}");
+    System.Console.WriteLine($"Сумма чисел от 1 до {number} до {sum}, а Гаусс, что {sumGauss}");
 }
