@@ -10,35 +10,41 @@ int Prompt(string strMessage)
     return temp;
 }
 
-bool ValidateNumber(int number)
+void FillArrayRandomNumbers(int[] numbers)
 {
-    if ( number>0)
+    for(int i = 0; i < numbers.Length; i++)
     {
-        System.Console.WriteLine("Число должно быть больше нуля");
-        return false;
+        numbers[i] = new Random().Next(100,1000);
     }
-    return true;
 }
-
-int FhreeDigitNumber (int[] array)
+void PrintArray(int[] numbers)
 {
-
-}
-
-int[] CreateArray(int length, int min, int max)
-{
-    int[] tempArray = new int[length];
-    for (int i = 0; i < length; i++)
+    Console.Write("[ ");
+    for(int i = 0; i < numbers.Length; i++)
     {
-        tempArray[i] = new Random().Next(min, max+1);
+        Console.Write(numbers[i] + " ");
     }
-    return tempArray;
+    Console.Write("]");
+    Console.WriteLine();
 }
 
-int length=Prompt("Введите длину массива: ");
-int min= ValidateNumber(number);
-int max= ValidateNumber(number);
-int[] array = CreateArray(length, min, max);
+int CheckingEvenArrayElements(int[] array)
+{
+    int count = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] % 2 == 0)
+            count++;
+    }
+    return count;
+}
 
+int length = Prompt("Введите размер массива: ");
+int[] numbers = new int[length];
+FillArrayRandomNumbers(numbers);
+PrintArray(numbers);
+int rezult = CheckingEvenArrayElements(numbers);
 System.Console.WriteLine();
-System.Console.WriteLine($"количество чётных чисел в массиве -> {rezult}");
+Console.WriteLine($"всего {length} чисел, {rezult} из них чётные");
+
+
