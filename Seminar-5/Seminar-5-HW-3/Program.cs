@@ -59,4 +59,4 @@ double min = MinArrayElements(numbers);
 double max = MaxArrayElements (numbers);
 double def = max-min;
 System.Console.WriteLine();
-Console.WriteLine($"разницу между максимальным и минимальным элементов массива  = {def}");
+Console.WriteLine($"разницу между максимальным и минимальным элементов массива  = {def:f2}");
