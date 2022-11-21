@@ -25,7 +25,7 @@ void PrintMatrixReal(double[,] matrix)  //Выводит на экран мат�
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            Console.Write($"{matrix[i, j]:f0}\t");
+            Console.Write($"{matrix[i, j]:f2}\t");
         }
         Console.Write("\n");
     }

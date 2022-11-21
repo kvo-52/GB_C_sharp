@@ -17,7 +17,7 @@ int InputArrayNumbers(int length)
     {
         arrayNew[i] = Prompt($"Введите {i+1}-е число: ");
     }
-    return arrayNew[length];
+    return arrayNew;
 }
 
 void PrintArray(int[] numbers)
@@ -43,7 +43,7 @@ int CheckingArrayElements(int[] array)
 }
 
 int length = Prompt("Введите количество чисел: ");
-int [] arrayNumber = new int[InputArrayNumbers(length)];
+int [] arrayNumber = InputArrayNumbers(length);
 PrintArray(arrayNumber);
 int rezult = CheckingArrayElements(arrayNumber);
 System.Console.WriteLine();
