@@ -43,7 +43,7 @@ int[,] FillArray(int m, int n)
 int ArithmeticMeanAerray(int[,]array)
 {
     ArithmeticMean=0;
-    for (int j=1; j<arrNums.GetLength(1); j++)
+    for (int j=0; j<arrNums.GetLength(1); j++)
         {
             ArithmeticMean=array[i,j];
         }

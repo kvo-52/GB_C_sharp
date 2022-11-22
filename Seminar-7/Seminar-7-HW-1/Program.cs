@@ -25,22 +25,17 @@ void PrintArray (double[,] arrNums)
         System.Console.WriteLine("");    
     }
 }
-double[,] FillArray(int m, int n, int minRandom = 0, int maxRandom = 10)
+double[,] FillArray(int m, int n)
 {
     double[,] array = new double[m,n];
-    for (int i=0; i<m; i++)
+    for (int i=0; i<array.GetLength(0); i++)
     {
-        for (int j=0; j<n; j++)
+        for (int j=0; j<array.GetLength(1); j++)
         {
-            array[i, j] = GetRandomReal(minRandom, maxRandom);
+            array[i, j] = new Random().NextDouble()*10-5;
         }
     }
     return array; 
-}
-
-double GetRandomReal(int minRandom, int maxRandom)  
-{
-    return new Random().NextDouble();
 }
 
 void Execute()

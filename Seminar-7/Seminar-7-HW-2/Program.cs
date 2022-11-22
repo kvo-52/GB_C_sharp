@@ -19,27 +19,15 @@ int PromptInt(string strMessage)
 
     throw new Exception("Это не число!!!");
 }
-
-// int Prompt(string message)
-// {
-//     while (true)
-//     try
-//     {
-//         return PromptInt(message);
-//     }
-//     catch (Exception e)
-//     {
-//         Console.WriteLine($"Вы чтото неправильно ввели. Ошибка: {e.Message}");
-//     }
-// }
-
-
-// int PromptInt(string strMessage)
-// {
-//     System.Console.Write(strMessage);
-//     int temp = int.Parse(System.Console.ReadLine());
-//     return temp;
-// }
+bool ValidateNumber (int number1, int number2)
+{
+    if (number1<0 || number2<0)
+    {
+        System.Console.WriteLine("НЕВЕРНО! Необходимо ввести число > 0.");
+        return false;
+    }
+    return true;
+}
 
 void PrintArray(int[,] arrNums)
 {
@@ -66,26 +54,50 @@ int[,] FillArray(int m, int n)
     return array;
 }
 
-void CheckArray(int[,] massiv)
+void CheckeElementArray(int[,] massiv, int number)
 {
-    int enterNumber = PromptInt("Введите целое число: ");
     for (int i = 0; i < massiv.GetLength(0); i++)
     {
         for (int j = 0; j < massiv.GetLength(1); j++)
         {
-            if (massiv[i, j] == enterNumber)
-                Console.WriteLine("Такого числа в массиве нет");
+            if (massiv[i, j] == number)
+            {
+                System.Console.WriteLine($"Позиция [{i},{j}]соттветсвует введеному числу [{number}]");
+                return;
+            }
+            
         }
     }
+    System.Console.WriteLine("Такого элемента нет в массиве");
+}
+
+void FindElementArray(int[,] massiv, int indexI, int indexJ)
+{
+    if (indexI < massiv.GetLength(0) && indexJ < massiv.GetLength(1))
+    {
+        System.Console.WriteLine($"Позиция [{indexI},{indexJ}]соттветсвует числу [{massiv[indexI, indexJ]}]");
+        return;
+    }
+    System.Console.WriteLine("Такого элемента нет в массиве");
 }
 
 void Execute()
 {
     int intM = PromptInt("Введите размерность M (строки): ");
     int intN = PromptInt("Введите размерность N (столбцы): ");
+    System.Console.WriteLine();
     int[,] tempArray = FillArray(intM, intN);
     PrintArray(tempArray);
-    CheckArray(tempArray);
+    System.Console.WriteLine();
+    int indexI = PromptInt("Введите позицию элемента в строке: ");
+    int indexJ = PromptInt("Введите позицию элемента в столбце: ");
+    if (ValidateNumber(indexI, indexJ))
+    {
+     FindElementArray(tempArray, indexI, indexJ);   
+    }
+    System.Console.WriteLine();
+    int number = PromptInt("Введите любое число: ");
+    CheckeElementArray(tempArray, number);
 }
 
 Execute();
