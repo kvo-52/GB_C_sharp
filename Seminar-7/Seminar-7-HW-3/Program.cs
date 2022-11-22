@@ -14,22 +14,22 @@ int PromptInt(string strMessage)
     return temp;
 }
 
-void PrintArray (double[,] arrNums)
+void PrintArray(double[,] arrNums)
 {
-    for (int i=0; i<arrNums.GetLength(0); i++)
+    for (int i = 0; i < arrNums.GetLength(0); i++)
     {
         System.Console.Write($"{arrNums[i, 0]:f2}");
-        for (int j=1; j<arrNums.GetLength(1); j++)
+        for (int j = 1; j < arrNums.GetLength(1); j++)
         {
             System.Console.Write($" {arrNums[i, j]:f2}");
         }
-        System.Console.WriteLine("");    
+        System.Console.WriteLine("");
     }
 }
 
-int[,] FillArray(int m, int n)
+double[,] FillArray(int m, int n)
 {
-    int[,] array = new int[m, n];
+    double[,] array = new double[m, n];
     for (int i = 0; i < m; i++)
     {
         for (int j = 0; j < n; j++)
@@ -40,23 +40,37 @@ int[,] FillArray(int m, int n)
     return array;
 }
 
-int ArithmeticMeanAerray(int[,]array)
+double[] ArithmeticMeanAerray(double[,] array)
 {
-    ArithmeticMean=0;
-    for (int j=0; j<arrNums.GetLength(1); j++)
+    double[] average = new double[array.GetLength(1)];
+    for (int j = 0; j < array.GetLength(1); j++)
+    {
+        for (int i = 0; i < array.GetLength(0); i++)
         {
-            ArithmeticMean=array[i,j];
+            average[j] += array[i, j];
         }
-        return ArithmeticMean;
+        average[j] = average[j] / array.GetLength(0);
+    }
+    return average;
+}
+
+void PrintAverage(double[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        System.Console.Write($"{array[i]}; ");
+    }
 }
 
 void Execute()
 {
     int intM = PromptInt("Введите размерность M (строки): ");
     int intN = PromptInt("Введите размерность N (столбцы): ");
-    int[,] tempArray = FillArray(intM, intN);
+    double[,] tempArray = FillArray(intM, intN);
     PrintArray(tempArray);
-    ArithmeticMeanAerray(tempArray);
+    Console.WriteLine();
+    Console.WriteLine($"Среднее арифметическое каждого столбца: ");
+    PrintAverage(ArithmeticMeanAerray(tempArray));
 }
 
 Execute();
