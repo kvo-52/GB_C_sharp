@@ -10,7 +10,7 @@ int Prompt(string msg)
     return length;
 }
 
-int InputArrayNumbers(int length)
+int[] InputArrayNumbers(int length)
 {
     int[] arrayNew = new int[length];
     for (int i = 0; i < arrayNew.Length; i++)
