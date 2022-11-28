@@ -11,7 +11,7 @@ void PrintNumbers(int n)
         return;
     }
     
-    System.Console.WriteLine(n);
+    
     PrintNumbers(n-1);
     System.Console.WriteLine(n);
 }

@@ -39,7 +39,7 @@ int[] CopyArr(int[] arr)
 
 void Runner()
 {
-    int[] arr1 = CreateArray(len:5);
+    int[] arr1 = CreateArray(5);
     PrintArray(arr1);
 
     int[] arr2 = arr1;
