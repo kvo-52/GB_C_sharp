@@ -20,15 +20,15 @@ bool ValidateNumber(int number)
     }
     return true;
 }
-void SumPrintNumbersMN (int numberM, int numberN, int sum)
+void SumNumbersMN(int numberM, int numberN, int sum)
 {
-    if (numberM > numberN) 
+    if (numberM > numberN)
     {
-        Console.WriteLine($"Сумма натуральных элементов в промежутке от M до N: {sum}"); 
+        Console.WriteLine($"Сумма натуральных элементов в промежутке от M до N: {sum}");
         return;
     }
-    sum = sum + (numberM++);
-    SumPrintNumbersMN(numberM, numberN, sum);
+     sum = sum + (numberM++);
+    SumNumbersMN(numberM, numberN, sum);
 }
 
 void Execute()
@@ -39,10 +39,10 @@ void Execute()
         int numberN = PromptInt("Введите число N: ");
         if (ValidateNumber(numberN))
         {
-            SumPrintNumbersMN(numberM, numberN, 0);
+            SumNumbersMN(numberM, numberN,0);
         }
     }
-    
+
 }
 
 Execute();
