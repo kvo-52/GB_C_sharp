@@ -1,0 +1,15 @@
+I:\GeekBrains\GB_HomeWork\Итоговый проект-1\Задача\bin\Debug\net6.0\Задача.exe
+I:\GeekBrains\GB_HomeWork\Итоговый проект-1\Задача\bin\Debug\net6.0\Задача.deps.json
+I:\GeekBrains\GB_HomeWork\Итоговый проект-1\Задача\bin\Debug\net6.0\Задача.runtimeconfig.json
+I:\GeekBrains\GB_HomeWork\Итоговый проект-1\Задача\bin\Debug\net6.0\Задача.dll
+I:\GeekBrains\GB_HomeWork\Итоговый проект-1\Задача\bin\Debug\net6.0\Задача.pdb
+I:\GeekBrains\GB_HomeWork\Итоговый проект-1\Задача\obj\Debug\net6.0\Задача.csproj.AssemblyReference.cache
+I:\GeekBrains\GB_HomeWork\Итоговый проект-1\Задача\obj\Debug\net6.0\Задача.GeneratedMSBuildEditorConfig.editorconfig
+I:\GeekBrains\GB_HomeWork\Итоговый проект-1\Задача\obj\Debug\net6.0\Задача.AssemblyInfoInputs.cache
+I:\GeekBrains\GB_HomeWork\Итоговый проект-1\Задача\obj\Debug\net6.0\Задача.AssemblyInfo.cs
+I:\GeekBrains\GB_HomeWork\Итоговый проект-1\Задача\obj\Debug\net6.0\Задача.csproj.CoreCompileInputs.cache
+I:\GeekBrains\GB_HomeWork\Итоговый проект-1\Задача\obj\Debug\net6.0\Задача.dll
+I:\GeekBrains\GB_HomeWork\Итоговый проект-1\Задача\obj\Debug\net6.0\refint\Задача.dll
+I:\GeekBrains\GB_HomeWork\Итоговый проект-1\Задача\obj\Debug\net6.0\Задача.pdb
+I:\GeekBrains\GB_HomeWork\Итоговый проект-1\Задача\obj\Debug\net6.0\Задача.genruntimeconfig.cache
+I:\GeekBrains\GB_HomeWork\Итоговый проект-1\Задача\obj\Debug\net6.0\ref\Задача.dll

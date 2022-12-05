@@ -3,6 +3,12 @@
 //  либо задать на старте выполнения алгоритма.
 //  При решение не рекомендуется пользоваться коллекциями, лучше обойтись исключительно массивами.
 
+string Prompt(string strMessage)
+{
+    System.Console.Write(strMessage);
+    string temp = System.Console.ReadLine();
+    return temp;
+}
 
 void SecondArrayString(string[] array1, string[] array2)
 {
@@ -25,6 +31,11 @@ void PrintArray(string[] array)
     Console.WriteLine();
 }
 
-string stringStart = Console.ReadLine();
-string[] stingArray = stringStart.Split();
+string stringStart = Prompt("Введите строку из любых символов через пробел: ");
+string[] array1 = stringStart.Split();
+string[] array2 = new string[array1.Length];
+Console.WriteLine();
+SecondArrayString (array1, array2);
+PrintArray (array2);
+
 
